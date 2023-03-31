@@ -1,0 +1,194 @@
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsla(249, 10%, 26%, 0.2);
+    --dark-blue-high-opacity: hsla(249, 10%, 26%, 0.3);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    --thin-weight: 400;
+    --normal-weight: 500;
+    --semi-bold-weight: 600;
+    --bold-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+    background-image: url(./images/bg-intro-desktop.png);
+    font-size: 16px;
+}
+
+main{
+    height: 98.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 2rem;
+}
+
+.description{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 60%;
+}
+
+.description > h1{
+    font-weight: var(--bold-weight);
+    font-size: 3rem;
+    line-height: 1.15em;
+    width: 80%;
+}
+
+.description > p{
+    font-weight: var(--thin-weight);
+    width: 80%;
+}
+
+.form, .sign-up-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.offer{
+    background-color: var(--blue);
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.offer{
+    box-shadow: 0 8px var(--dark-blue);
+}
+
+.sign-up{
+    box-shadow: 0 6px var(--dark-blue-high-opacity);
+}
+
+.bold{
+    font-weight: var(--bold-weight);
+}
+
+.sign-up{
+    background-color: white;
+    border-radius: 8px;
+    width: 32rem;
+    padding: 2.5rem 1rem;
+}
+
+.sign-up-form > input{
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    outline: 1px solid var(--grayish-blue);
+    font-weight: var(--semi-bold-weight);
+    border: 0;
+}
+
+.sign-up-form > input:focus{
+    outline: 2px solid var(--grayish-blue);
+}
+
+button{
+    color: white;
+    font-weight: var(--semi-bold-weight);
+    background-color: var(--green);
+    border: 0;
+    width: 90%;
+    padding: 1rem 0;
+    border-radius: 6px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.sign-up > p{
+    font-weight: var(--thin-weight);
+    color: var(--grayish-blue);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.red{
+    color: var(--red);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .description{      
+        text-align: center;
+    }
+
+    .description > h1{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .description > p{
+        width: 100%;
+    }
+
+    .offer{
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .attribution{
+        visibility: hidden;
+    }
+
+    .sign-up{
+        width: 80%;
+    }
+
+    .sign-up-form{
+        gap: 1rem;
+    }
+
+    .sign-up-form > input{
+        width: 90%;
+    }
+
+    button{
+        width: 90%;
+    }
+}
