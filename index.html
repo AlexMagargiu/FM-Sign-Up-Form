@@ -18,17 +18,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./javascript.js" defer></script>
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
     <main>
       <div class="content">
         <section class="description">
-          <h1>Learn to code by watching others</h1>
+          <h1>
+            Learn to code by<br />
+            watching others
+          </h1>
           <p>
-            See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think
-            is invaluable.
+            See how experienced developers solve problems in real-time.
+            <br />Watching scripted tutorials is great, but understanding how<br />
+            developers think is invaluable.
           </p>
         </section>
         <section class="form">
@@ -37,11 +41,29 @@
           </div>
           <div class="sign-up">
             <form class="sign-up-form">
-              <input type="text" class="first-name" placeholder="First Name" />
-              <input type="text" class="last-name" placeholder="Last Name" />
-              <input type="email" class="email" placeholder="Email Address" />
-              <input type="password" class="password" placeholder="Password" />
-              <button type="submit">CLAIM YOUR FREE TRIAL</button>
+              <div class="first-name-div">
+                <input
+                  type="text"
+                  class="first-name"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="last-name-div">
+                <input type="text" class="last-name" placeholder="Last Name" />
+              </div>
+              <div class="email-div">
+                <input type="email" class="email" placeholder="Email Address" />
+              </div>
+              <div class="password-div">
+                <input
+                  type="password"
+                  class="password"
+                  placeholder="Password"
+                />
+              </div>
+              <button type="button" onclick="error()">
+                CLAIM YOUR FREE TRIAL
+              </button>
             </form>
             <p>
               By clicking the button, you are agreeing to our
