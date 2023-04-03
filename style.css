@@ -179,6 +179,7 @@ button:hover{
     body{
         padding-top: 6rem;
         height: 100%;
+        background-image: url(./images/bg-intro-mobile.png);
     }
 
     .content{
