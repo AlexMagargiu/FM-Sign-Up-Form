@@ -5,6 +5,7 @@
     --dark-blue: hsla(249, 10%, 26%, 0.2);
     --dark-blue-high-opacity: hsla(249, 10%, 26%, 0.3);
     --grayish-blue: hsl(246, 25%, 77%);
+    --light-green: hsla(154, 59%, 51%, 0.7);
 
     --thin-weight: 400;
     --normal-weight: 500;
@@ -23,10 +24,11 @@ body{
     background-color: var(--red);
     background-image: url(./images/bg-intro-desktop.png);
     font-size: 16px;
+    height: 100vh;
 }
 
 main{
-    height: 98.5vh;
+    height: 98%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +100,28 @@ main{
     padding: 2.5rem 1rem;
 }
 
-.sign-up-form > input{
+.error{
+    outline: 2px solid var(--red) !important;
+    background: url(./images/icon-error.svg) no-repeat right 5% bottom 50%;
+}
+
+.error::placeholder{
+    color: var(--red);
+}
+
+.error-para{
+    text-align: end;
+    padding-top: 10px;
+    font-size: 0.70rem;
+    color: var(--red);
+}
+
+.sign-up-form > div{
     width: 90%;
+}
+
+.sign-up-form > div > input{
+    width: 100%;
     padding: 1rem 2rem;
     border-radius: 6px;
     outline: 1px solid var(--grayish-blue);
@@ -121,6 +143,11 @@ button{
     border-radius: 6px;
     font-size: 14px;
     letter-spacing: 2px;
+}
+
+button:hover{
+    background-color: var(--light-green);
+    box-shadow: 0 3px var(--green);
 }
 
 .sign-up > p{
@@ -149,12 +176,18 @@ button:hover{
 }
 
 @media only screen and (max-width: 600px){
+    body{
+        padding-top: 6rem;
+        height: 100%;
+    }
+
     .content{
         flex-direction: column;
         gap: 5rem;
     }
 
-    .description{      
+    .description{   
+        width: 100%;   
         text-align: center;
     }
 
@@ -168,7 +201,7 @@ button:hover{
     }
 
     .offer{
-        width: 80%;
+        width: 100%;
         padding: 2rem;
     }
 
@@ -177,7 +210,7 @@ button:hover{
     }
 
     .sign-up{
-        width: 80%;
+        width: 100%;
     }
 
     .sign-up-form{
